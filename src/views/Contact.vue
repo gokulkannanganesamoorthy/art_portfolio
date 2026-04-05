@@ -83,7 +83,9 @@ onBeforeUnmount(() => {
           class="h-full w-full flex justify-center items-end absolute pointer-events-none bg-red-400a"
           :style="`transform: translateY(${translationRef}px)`"
         >
-          <div class="max-h-full relative w-full md:w-full aspect-[9/16]">
+          <div
+            class="max-h-full relative w-4/5 md:w-full aspect-[9/16] mx-auto"
+          >
             <img
               src="/contact/body.png"
               alt="Gokul Kannan Ganesamoorthy - Character Illustration Body"
