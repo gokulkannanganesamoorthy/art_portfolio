@@ -14,43 +14,41 @@ const parallaxItems = ref([]);
 const autoAnimDegree = ref(0);
 
 const updatePosition = () => {
-
   const rootRect = rootRef.value.getBoundingClientRect();
-  let cur = getPositions();
-  let relativeCursorX = rootRect.width / 2 + rootRect.left
-  let relativeCursorY = rootRect.height / 2 + rootRect.top
+  const cur = getPositions();
+  const relativeCursorX = rootRect.width / 2 + rootRect.left;
+  const relativeCursorY = rootRect.height / 2 + rootRect.top;
 
-  if (!md.value) {
-    autoAnimDegree.value = (autoAnimDegree.value + 0.005) % 360;
-    const hyp = 300;
+  // Always increment the autonomous motion loop
+  autoAnimDegree.value = (autoAnimDegree.value + 0.005) % 360;
+  const hyp = 300;
+  const autoX = hyp * Math.cos(autoAnimDegree.value * 1.5);
+  const autoY = hyp * Math.sin(autoAnimDegree.value);
 
-    cur.x = hyp * Math.cos(autoAnimDegree.value * 1.5)
-    cur.y = hyp * Math.sin(autoAnimDegree.value)
-    relativeCursorX = 0
-    relativeCursorY = 0
-  };
-
-  parallaxItems.value.forEach(el => {
-    const multiplicator = el.dataset.parallaxValue;
+  parallaxItems.value.forEach((el) => {
+    const multiplicator = parseFloat(el.dataset.parallaxValue) || 0.1;
     let x;
     let y;
 
     if (!md.value) {
-      // Linear move
-      x = (cur.x - relativeCursorX) * -multiplicator;
-      y = (cur.y - relativeCursorY) * -multiplicator;
-     
+      // Mobile: Pure autonomous looping motion
+      x = autoX * -multiplicator;
+      y = autoY * -multiplicator;
     } else {
-       // Quadratic move
+      // PC: Combine autonomous motion + subtle cursor follow
       const dx = cur.x - relativeCursorX;
       const dy = cur.y - relativeCursorY;
-      x = -(dx * multiplicator * 2) / Math.log(Math.abs(dx) + 2);
-      y = -(dy * multiplicator * 2) / Math.log(Math.abs(dy) + 2);
+      const cursorX = -(dx * multiplicator * 2) / Math.log(Math.abs(dx) + 2);
+      const cursorY = -(dy * multiplicator * 2) / Math.log(Math.abs(dy) + 2);
+
+      // Blend auto-motion and cursor-follow
+      x = cursorX + (autoX * multiplicator * 0.5);
+      y = cursorY + (autoY * multiplicator * 0.5);
     }
 
     el.style.transform = `translateX(${x}px) translateY(${y}px)`;
-  })
-}
+  });
+};
 
 onMounted(() => {
   parallaxItems.value = Array.from(rootRef.value.getElementsByClassName("parallax"));
