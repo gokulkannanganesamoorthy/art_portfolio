@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gokulkannan.dev/sitemap.xml
+Sitemap: https://gokulkannanganesamoorthy.dev/sitemap.xml
