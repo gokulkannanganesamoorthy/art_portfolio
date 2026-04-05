@@ -8,12 +8,20 @@ import { useScrollContext } from '@/composables/useScrollContext';
 const { registerSection, unregisterSection } = useScrollContext();
 const frameRef = ref();
 const activeIndex = ref(0); // Default first one open
-
-const toggleProject = (index) => {
+const projectRefs = ref([]);
+const toggleProject = async (index) => {
   if (activeIndex.value === index) {
     activeIndex.value = -1; // Close if already open
   } else {
     activeIndex.value = index;
+    await nextTick();
+    // Smooth scroll to the project header with a small delay for the transition
+    setTimeout(() => {
+      projectRefs.value[index]?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }, 100);
   }
 };
 
@@ -58,7 +66,8 @@ onBeforeUnmount(() => {
       <div
         v-for="(project, pi) in projects"
         :key="pi"
-        class="w-full border-t border-neutral-100 last:border-b transition-colors duration-500 overflow-hidden"
+        :ref="(el) => (projectRefs[pi] = el)"
+        class="w-full border-t border-neutral-100 last:border-b transition-colors duration-500 overflow-hidden scroll-mt-20 md:scroll-mt-32"
         :class="
           activeIndex === pi ? 'bg-neutral-50/30' : 'hover:bg-neutral-50/50'
         "
