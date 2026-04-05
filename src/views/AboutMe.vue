@@ -110,16 +110,16 @@ onBeforeUnmount(() => {
                 class="h-full w-full flex items-end justify-end gap-6"
               >
                 <div class="flex gap-2 flex-col pb-[15%]">
-                  <h1 class="font-bold text-xl leading-none font-rubik">
+                  <h2 class="font-bold text-xl leading-none font-rubik">
                     {{ story.when }}
-                  </h1>
+                  </h2>
                   <p class="flex-1 h-fit">
                     {{ story.description }}
                   </p>
                 </div>
                 <img
                   :src="story.image"
-                  alt=""
+                  :alt="`Gokul Kannan Ganesamoorthy - Experience - ${story.when}`"
                   class="mr-0 md:mr-[6dvw] lg:mr-[12dvw] w-fit aspect-[9/16] max-h-full object-contain object-bottom"
                 />
               </div>

@@ -7,7 +7,9 @@ import Parallax from '@/components/Parallax.vue';
 <template>
      <FramedMainSection id="awards" class="h-dvh">
         <Parallax>
-            <div class="h-full w-full relative overflow-hidden rounded-4xl text-neutral-900 flex justify-center items-start md:items-end text-center p-4">
+            <div class="h-full w-full relative overflow-hidden rounded-4xl text-neutral-900 flex flex-col justify-start md:justify-end items-center text-center p-4 pt-20 md:pt-4">
+                <!-- Visually Hidden H1 for SEO -->
+                <h1 class="sr-only">Awards & Recognition | Gokul Kannan Ganesamoorthy</h1>
                 <!-- Subtle Oil Pastel Background Layer -->
                 <div class="absolute inset-0 bg-[url('/backgrounds/awards_bg_subtle.png')] bg-cover bg-center -z-10"></div>
                 
@@ -19,7 +21,7 @@ import Parallax from '@/components/Parallax.vue';
                 <div class="flex flex-col md:flex-row max-w-7xl mx-auto w-full">
                     <div v-for="award in awards" :key="award.title" class="h-fit flex-1 p-8 flex flex-col items-start cursor-default text-left group">
                         <span class="font-rubik text-neutral-400 text-xs tracking-widest uppercase mb-2">{{award.date}}</span>
-                        <h1 class="font-rubik text-2xl font-bold uppercase tracking-tighter mb-4 group-hover:text-red-custom transition-colors duration-500">{{award.title}}</h1>
+                        <h2 class="font-rubik text-2xl font-bold uppercase tracking-tighter mb-4 group-hover:text-red-custom transition-colors duration-500">{{award.title}}</h2>
                         <p class="text-neutral-600 font-light leading-relaxed">{{award.description}}</p>
                         <div class="w-12 h-px bg-neutral-200 mt-6 group-hover:w-full transition-all duration-700"></div>
                     </div>

@@ -24,6 +24,8 @@ onMounted(async () => {
         <div
           class="h-full w-full bg-cover rounded-4xl text-center flex items-start relative"
         >
+          <!-- Visually Hidden H1 for SEO -->
+          <h1 class="sr-only">Testimonials & Client Feedback | Gokul Kannan Ganesamoorthy</h1>
           <div
             :ref="registerContainer"
             class="flex flex-col relative items-center w-fit z-30 perspective-distant text-black"
@@ -49,7 +51,7 @@ onMounted(async () => {
       <template #background>
         <img
           src="/backgrounds/testimonials_bg.png"
-          alt=""
+          alt="Gokul Kannan Ganesamoorthy - Testimonials Artistic Background"
           class="h-full w-full object-cover"
         />
       </template>

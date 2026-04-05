@@ -86,13 +86,13 @@ onBeforeUnmount(() => {
           <div class="max-h-full relative w-2/3 md:w-full aspect-[9/16]">
             <img
               src="/contact/body.png"
-              alt=""
+              alt="Gokul Kannan Ganesamoorthy - Character Illustration Body"
               data-parallax-value=".15"
               class="absolute h-full w-full top-0 left-0 object-contain parallax"
             />
             <img
               src="/contact/arm.png"
-              alt=""
+              alt="Gokul Kannan Ganesamoorthy - Character Illustration Arm"
               data-parallax-value=".17"
               class="absolute h-full w-full top-0 left-0 object-contain parallax"
             />

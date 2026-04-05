@@ -8,6 +8,14 @@
     "desktop_pic": "/projects/vulnscan/background.png"
   },
   {
+    "title": "Luminary Portfolio",
+    "description": "A visually immersive photography portfolio designed with a focus on storytelling, smooth interactions, and aesthetic presentation. Built to showcase creative work through modern layouts, fluid animations, and a clean user experience.",
+    "link": "https://gokul-photography-site.vercel.app/",
+    "background": "/projects/photography/background.png",
+    "mobile_pic": "/projects/photography/background.png",
+    "desktop_pic": "/projects/photography/background.png"
+  },
+  {
     "title": "SaaSify",
     "description": "A hyper-modern SaaS landing page built with React, Tailwind CSS, and Framer Motion. Focused on smooth animations, scroll-based interactions, and premium UI/UX inspired by top-tier product websites.",
     "link": "https://gokul-saasify.vercel.app/",

@@ -120,7 +120,7 @@ onBeforeUnmount(() => {
               >
                 <img
                   :src="project.background"
-                  alt=""
+                  :alt="`Gokul Kannan Ganesamoorthy - Project - ${project.title}`"
                   class="w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-110"
                 />
                 <div
