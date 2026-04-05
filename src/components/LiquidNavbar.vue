@@ -73,8 +73,10 @@ onBeforeUnmount(() => {
         </div>
 
     </nav>
-    <section :class="{ '-translate-x-full': !isMobileMenuOpened }"
-        class="flex md:hidden transition-all fixed inset-0 h-full w-full filter backdrop-filter-[url('#liquidTexturedFilter')] z-50 ">
+    <section
+        :class="isMobileMenuOpened ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'"
+        class="flex md:hidden transition-all duration-500 ease-in-out fixed inset-0 h-full w-full filter backdrop-filter-[url('#liquidTexturedFilter')] z-50 transform-gpu"
+    >
         <div class="absolute inset-0 w-full h-full bg-black opacity-75 -z-10"></div>
         <div class="h-full w-full flex flex-col items-center text-white p-16 font-rubik z-0">
             <CrossIcon class="absolute top-4 left-4 h-12 w-12 cursor-pointer" @click="isMobileMenuOpened = false" />

@@ -27,33 +27,42 @@ const windowComponent = ref();
 
 const setCursorPos = (e) => {
   if (e instanceof MouseEvent) setPositions(e.clientX, e.clientY);
-}
+};
 
 onMounted(async () => {
   const trackerUrl = import.meta.env.VITE_TRACKER_URL;
-  if (trackerUrl) await fetch(trackerUrl)
+  if (trackerUrl) await fetch(trackerUrl);
   component.value = new AnimatedComponent();
   component.value.tick = setCursorPos;
-  component.value.addAnimationTrigger(window, "mousemove");
+  component.value.addAnimationTrigger(window, 'mousemove');
 
   windowComponent.value = new AnimatedComponent();
   windowComponent.value.tick = resetWidth;
-  windowComponent.value.addAnimationTrigger(window, "resize");
-})
+  windowComponent.value.addAnimationTrigger(window, 'resize');
+});
 </script>
 
 <template>
-  <section id="loading"
-    class="outline-[100dvw] outline-white rounded-[999px] bg-transparent h-0 w-0 fixed top-1/2 left-1/2 z-[100] -translate-1/2 flex items-center justify-center">
-    <span class="absolute font-ledger h-40 w-96 flex justify-center items-center">The paint is drying...</span>
+  <section
+    id="loading"
+    class="outline-[100dvw] outline-white rounded-[999px] bg-transparent h-0 w-0 fixed top-1/2 left-1/2 z-[100] -translate-1/2 flex items-center justify-center"
+  >
+    <span
+      class="absolute font-ledger h-40 w-96 flex justify-center items-center"
+      >The paint is drying...</span
+    >
   </section>
   <ScrollBar />
   <LiquidFilter />
   <LiquidTexturedFilter />
-  <div ref="containerRef" id="container" class="overflow-auto h-dvh flex flex-col items-center font-ledger"
-    style="scrollbar-width: none;">
+  <div
+    ref="containerRef"
+    id="container"
+    class="overflow-auto h-dvh flex flex-col items-center font-ledger"
+    style="scrollbar-width: none"
+  >
     <LiquidNavbar />
-    <div ref="contentRef" id="content" class=" w-full flex flex-col">
+    <div ref="contentRef" id="content" class="w-full flex flex-col">
       <Home />
       <AboutMe v-if="md" />
       <AboutMeMobile v-else />
@@ -62,18 +71,14 @@ onMounted(async () => {
       <Testimonials v-if="md" />
       <TestimonialsMobile v-else />
       <Contact />
-      <footer class="relative">
-        <span class="absolute bottom-0 text-sm p-[4dvw] opacity-60 text-white">
-          <CustomA text="Read the code here" href="https://github.com/gokulkannanganesamoorthy/portfolio" target="_blank" />
-        </span>
-      </footer>
     </div>
   </div>
 </template>
 
 <style scoped>
 #loading {
-  animation: 1.5s resize 3s ease-in-out forwards,
+  animation:
+    1.5s resize 3s ease-in-out forwards,
     0s hide 4s forwards;
 
   span {

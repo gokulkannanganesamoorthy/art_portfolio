@@ -41,7 +41,7 @@ onBeforeUnmount(() => {
     <Parallax>
       <div
         ref="contactSectionRef"
-        class="h-full w-full relative rounded-4xl flex flex-col pt-24"
+        class="h-full w-full relative rounded-4xl flex flex-col pt-12 md:pt-24"
       >
         <div
           class="absolute h-full w-full inset-0 rounded-4xl overflow-hidden -z-10"
@@ -51,7 +51,7 @@ onBeforeUnmount(() => {
           ></div>
         </div>
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8 px-8 text-neutral-900"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 md:gap-8 px-6 md:px-8 text-neutral-900"
         >
           <div v-for="(value, key) in contact" :key="key" class="h-full w-full">
             <h2
@@ -59,7 +59,7 @@ onBeforeUnmount(() => {
             >
               {{ key }}
             </h2>
-            <ul class="pt-4 text-2xl flex flex-col gap-2">
+            <ul class="pt-4 text-lg md:text-2xl flex flex-col gap-2">
               <li v-for="(h, index) in value" :key="index" class="w-fit">
                 <CustomA
                   v-if="!h.hidden"
@@ -73,7 +73,7 @@ onBeforeUnmount(() => {
         </div>
 
         <div
-          class="flex flex-col justify-center items-center text-[10dvw] leading-none w-full h-full font-rubik"
+          class="flex flex-col justify-center items-center pb-16 md:pb-0 text-5xl md:text-[8dvw] leading-none w-full h-[60%] md:h-full font-rubik"
         >
           <h1 class="text-neutral-900">Let's work</h1>
           <h1 class="text-red-custom z-10">together</h1>
@@ -83,7 +83,7 @@ onBeforeUnmount(() => {
           class="h-full w-full flex justify-center items-end absolute pointer-events-none bg-red-400a"
           :style="`transform: translateY(${translationRef}px)`"
         >
-          <div class="max-h-full relative w-2/3 md:w-full aspect-[9/16]">
+          <div class="max-h-full relative w-full md:w-full aspect-[9/16]">
             <img
               src="/contact/body.png"
               alt="Gokul Kannan Ganesamoorthy - Character Illustration Body"
