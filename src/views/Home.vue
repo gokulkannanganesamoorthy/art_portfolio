@@ -20,6 +20,8 @@ onMounted(() => {
     <div
       class="h-full w-full bg-cover bg-position-[center_40%] rounded-4xl bg-[url('/backgrounds/hero_bg.png')] flex flex-col justify-center items-center text-center overflow-hidden"
     >
+      <!-- Visually Hidden H1 for SEO -->
+      <h1 class="sr-only">Gokul Kannan Ganesamoorthy | Creative Fullstack Developer & Designer</h1>
       <div
         class="text-neutral-900 font-rubik uppercase text-[10dvw] xl:text-[13dvh] leading-none flex flex-col justify-center items-center"
       >
