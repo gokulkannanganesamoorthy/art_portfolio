@@ -1,0 +1,23 @@
+[
+  {
+    "image": "/about/kid.png",
+    "when": "When I was a child",
+    "description": "I was always curious about how things work. Whether it was gadgets, games, or the internet, I kept asking \"how\" and \"why\". I spent most of my time exploring, breaking things, and learning by doing. That curiosity slowly turned into a deep interest in technology and creativity.",
+    "from": "2006",
+    "to": "2019"
+  },
+  {
+    "image": "/about/teen.png",
+    "when": "Exploring my teenage years",
+    "description": "This is where everything became serious. I started diving into web design, development, and cybersecurity. Instead of just learning, I started building - real projects, real websites, and solving real problems. I explored modern technologies, improved my skills daily, and began working with clients, turning my passion into something impactful.",
+    "from": "2019",
+    "to": "2024"
+  },
+  {
+    "image": "/about/adult.png",
+    "when": "Today",
+    "description": "Today, I’m a developer, designer, and founder of Luno Tech. I build modern, interactive digital experiences and continuously push my limits with new technologies. From creating advanced web projects to working on cybersecurity tools like VulnScan, I focus on innovation, quality, and real-world impact. And this is just the beginning.",
+    "from": "2024",
+    "to": "Present"
+  }
+]

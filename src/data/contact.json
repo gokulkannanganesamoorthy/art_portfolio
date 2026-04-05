@@ -1,0 +1,27 @@
+{
+  "Hire me": [
+    {
+      "text": "gokulkannan.dev@gmail.com",
+      "href": "mailto:gokulkannan.dev@gmail.com"
+    }
+  ],
+  "Social": [
+    {
+      "text": "LinkedIn",
+      "href": "https://www.linkedin.com/in/gokulkannanganesamoorthy",
+      "target": "_blank"
+    }
+  ],
+  "Open source": [
+    {
+      "text": "GitHub",
+      "href": "https://github.com/gokulkannanganesamoorthy",
+      "target": "_blank"
+    },
+    {
+      "text": "ORCID",
+      "href": "https://orcid.org/0009-0004-5703-863X",
+      "target": "_blank"
+    }
+  ]
+}

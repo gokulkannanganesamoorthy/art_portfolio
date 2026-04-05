@@ -1,0 +1,34 @@
+[
+  {
+    "title": "VulnScan",
+    "description": "A full-scale web penetration testing tool with 20+ modules including SQL injection, XSS, CSRF, API security testing, and AI-powered vulnerability detection. Published as a PyPI package for professional security audits.",
+    "link": "https://pypi.org/project/vulnscan/",
+    "background": "/projects/vulnscan/background.png",
+    "mobile_pic": "/projects/vulnscan/background.png",
+    "desktop_pic": "/projects/vulnscan/background.png"
+  },
+  {
+    "title": "SaaSify",
+    "description": "A hyper-modern SaaS landing page built with React, Tailwind CSS, and Framer Motion. Focused on smooth animations, scroll-based interactions, and premium UI/UX inspired by top-tier product websites.",
+    "link": "https://gokul-saasify.vercel.app/",
+    "background": "/projects/saasify/background.png",
+    "mobile_pic": "/projects/saasify/background.png",
+    "desktop_pic": "/projects/saasify/background.png"
+  },
+  {
+    "title": "Neon Commerce",
+    "description": "A Gen-Z focused sneaker e-commerce website with bold visuals, interactive layouts, and modern design systems. Built to deliver a high-energy shopping experience with strong branding.",
+    "link": "https://gokul-neon-commerce.vercel.app/",
+    "background": "/projects/neon/background.png",
+    "mobile_pic": "/projects/neon/background.png",
+    "desktop_pic": "/projects/neon/background.png"
+  },
+  {
+    "title": "Dino Portfolio",
+    "description": "An experimental interactive portfolio inspired by the Chrome Dino game. Built with a custom 1-bit style and physics logic, blending creativity with development for a unique user experience.",
+    "link": "https://gokulkannanganesamoorthy-dino-portfolio.vercel.app",
+    "background": "/projects/dino/background.png",
+    "mobile_pic": "/projects/dino/background.png",
+    "desktop_pic": "/projects/dino/background.png"
+  }
+]
